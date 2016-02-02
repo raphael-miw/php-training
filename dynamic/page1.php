@@ -12,11 +12,19 @@
 <div id="page">
     <!-- DIV : Aucun sens sémantique - zone géographique -->
 
-    <header><!-- Entête de la zone considérée --></header>
-    <nav><!-- Nav. principale de la page -> site --></nav>
+    <header>
+        <?php include "src/header.html" ?>
+    </header>
+    <nav>
+        <?php include "src/nav.html" ?>
+    </nav>
     <aside><!-- Les à-cotés de la page --></aside>
-    <article><!-- Contenu textuel de la page --></article>
-    <footer><!-- Pied-de-page de la page -> site --></footer>
+    <article><!-- Contenu textuel de la page -->
+        <?php include "src/pages/page1.html" ?>
+    </article>
+    <footer><!-- Pied-de-page de la page -> site -->
+        <?php include "src/footer.html" ?>
+    </footer>
 
 </div>
 </body>
