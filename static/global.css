@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+header {
+    background-color: rgba(255,0,0,0.2);
+    height: 150px;
+}
+
+nav {
+    background-color: rgba(0,255,0,0.2);
+    height: 30px;
+}
+
+aside {
+    float: left;
+    height: 500px;
+    width: 200px;
+    background-color: rgba(0,0,255,0.2);
+}
+article {
+    float: left;
+    height: 500px;
+    width: calc(100% - 200px);
+    background-color: rgba(0,255,255,0.2);
+    box-sizing: border-box;
+}
+
+footer {
+    clear: both;
+    background-color: rgba(255,255,0,0.2);
+    height: 150px;
+}
