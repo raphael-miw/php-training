@@ -21,14 +21,20 @@
     <aside><!-- Les à-cotés de la page --></aside>
     <article><!-- Contenu textuel de la page -->
         <?php
-        if(isset($_GET["page"])) {
-            $page = $_GET["page"];
+        if(isset($_GET["faille"])) {
+            $page = $_GET["faille"];
+            readfile($page);
+            // grosse faille !!!
+        } elseif(isset($_GET["page"])) {
+            // petite faille !!!
+            $page = "src/pages/".$_GET["page"].".html";
         } else {
-            $page = "homepage";
+            $page = "src/pages/homepage.html";
         }
 
-        if(file_exists("src/pages/".$page.".html")) {
-            include "src/pages/".$page.".html";
+        if(file_exists($page)) {
+            include $page;
+//            echo file_get_contents($_GET["page"]);
         } else {
             // on ne peut pas gérer les headers ici, car la page a déjà commencé le rendu
             // header("HTTP/1.0 404 Not Found");
