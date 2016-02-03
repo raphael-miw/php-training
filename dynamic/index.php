@@ -20,7 +20,14 @@
     </nav>
     <aside><!-- Les à-cotés de la page --></aside>
     <article><!-- Contenu textuel de la page -->
-        <?php include "src/pages/homepage.html" ?>
+        <?php
+        if(isset($_GET["page"])) {
+            $page = $_GET["page"];
+        } else {
+            $page = "homepage";
+        }
+        include "src/pages/".$page.".html";
+        ?>
     </article>
     <footer><!-- Pied-de-page de la page -> site -->
         <?php include "src/footer.html" ?>
