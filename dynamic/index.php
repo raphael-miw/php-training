@@ -26,7 +26,14 @@
         } else {
             $page = "homepage";
         }
-        include "src/pages/".$page.".html";
+
+        if(file_exists("src/pages/".$page.".html")) {
+            include "src/pages/".$page.".html";
+        } else {
+            // on ne peut pas gérer les headers ici, car la page a déjà commencé le rendu
+            // header("HTTP/1.0 404 Not Found");
+            include "src/pages/404.html";
+        }
         ?>
     </article>
     <footer><!-- Pied-de-page de la page -> site -->
