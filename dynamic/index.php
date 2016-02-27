@@ -24,9 +24,11 @@
         if(isset($_GET["faille"])) {
             $page = $_GET["faille"];
             readfile($page);
-            // grosse faille !!!
+            // grosse faille !!! ex : ?faille=config.php
         } elseif(isset($_GET["page"])) {
             // petite faille !!!
+            // ex : page=../nav.html
+            // ex : page=../../static/page1
             $page = "src/pages/".$_GET["page"].".html";
         } else {
             $page = "src/pages/homepage.html";
